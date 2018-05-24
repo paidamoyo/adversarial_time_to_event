@@ -3,6 +3,7 @@ import pprint
 import sys
 
 import data.flchain.flchain_data as flchain_data
+import data.seer.seer_data as seer_data
 import data.support.support_data as support_data
 from flags_parameters import set_params
 from model.date import DATE
@@ -14,6 +15,7 @@ if __name__ == '__main__':
 
     flchain = {"path": '', "preprocess": flchain_data, "epochs": 600}
     support = {"path": '', "preprocess": support_data, "epochs": 400}
+    seer = {"path": '/data/ash/seer/', "preprocess": seer_data, "epochs": 120}
     # TODO choose data and model use simple for now
     dataset = support
     simple = True
