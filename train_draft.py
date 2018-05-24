@@ -3,6 +3,7 @@ import pprint
 import sys
 
 import data.flchain.flchain_data as flchain_data
+import data.seer.seer_data as seer_data
 import data.support.support_data as support_data
 from flags_parameters import set_params
 from model.deep_regularized_aft import DeepRegularizedAFT
@@ -13,6 +14,7 @@ if __name__ == '__main__':
 
     flchain = {"path": '', "preprocess": flchain_data, "epochs": 350}
     support = {"path": '', "preprocess": support_data, "epochs": 400}
+    seer = {"path": '/data/ash/seer/', "preprocess": seer_data, "epochs": 40}  # TODO replace with your path
     # TODO choose data
     dataset = support
 
