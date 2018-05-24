@@ -16,7 +16,7 @@ if __name__ == '__main__':
     support = {"path": '', "preprocess": support_data, "epochs": 400}
     # TODO choose data and model use simple for now
     dataset = support
-    simple = False
+    simple = True
     if simple:
         model = DATE
     else:
