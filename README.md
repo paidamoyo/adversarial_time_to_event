@@ -24,6 +24,8 @@ The following datesets can be found in the *data* folder:
 - SUPPORT: http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets
 - Flchain: https://vincentarelbundock.github.io/Rdatasets/doc/survival/flchain.html
 
+We provide a preprocessing script for the SEER dataset which can downloaded from <https://seer.cancer.gov/>
+
 ### Training the model
 
 * To train DATE or DATE_AE model
