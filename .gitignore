@@ -1,0 +1,14 @@
+# Created by .ignore support plugin (hsz.mobi)
+!date.log
+!date_ae.log
+__pycache__/
+data/__pycache__/
+data/cathgen/__pycache__/
+data/flchain/__pycache__/
+data/sanofi/__pycache__/
+data/seer/__pycache__/
+data/support/__pycache__/
+model/__pycache__/
+utils/__pycache__/
+summaries/
+summaries_sanofi/
