@@ -255,7 +255,7 @@ class DATE_AE(object):
                                                    is_training=self.is_training, batch_norm=self.batch_norm,
                                                    reuse=True, keep_prob=self.keep_prob)  # fake
 
-        self.disc_one_loss = -tf.reduce_mean(self.log(d_one_real) + self.log(1 - d_one_fake))
+        self.disc_one_loss = -tf.reduce_mean(self.log(d_one_real)) - tf.reduce_mean(self.log(1 - d_one_fake))
 
         # Generator loss
         self.gen_one_loss = tf.reduce_mean(f_one_real) - tf.reduce_mean(f_one_fake)
