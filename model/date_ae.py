@@ -43,7 +43,6 @@ class DATE_AE(object):
                  disc_updates,
                  categorical_indices,
                  l2_reg,
-                 dropout_rate,
                  max_epochs,
                  path_large_data=""
                  ):
@@ -51,7 +50,6 @@ class DATE_AE(object):
         self.hidden_dim = hidden_dim
         self.batch_size = batch_size
         self.disc_updates = disc_updates
-        self.dropout_rate = dropout_rate
         self.latent_dim = latent_dim
         self.path_large_data = path_large_data
         self.seed = seed

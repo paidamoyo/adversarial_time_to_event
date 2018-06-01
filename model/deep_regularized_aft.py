@@ -30,7 +30,6 @@ class DeepRegularizedAFT(object):
                  num_iterations,
                  hidden_dim,
                  latent_dim,
-                 risk_function,
                  input_dim,
                  num_examples,
                  keep_prob,
@@ -42,7 +41,6 @@ class DeepRegularizedAFT(object):
                  imputation_values,
                  categorical_indices,
                  l2_reg,
-                 dropout_rate,
                  sample_size,
                  max_epochs,
                  path_large_data=""
@@ -51,7 +49,6 @@ class DeepRegularizedAFT(object):
         self.max_epochs = max_epochs
         self.hidden_dim = hidden_dim
         self.batch_size = batch_size
-        self.dropout_rate = dropout_rate
         self.latent_dim = latent_dim
         self.sample_size = sample_size
         self.path_large_data = path_large_data
@@ -65,7 +62,6 @@ class DeepRegularizedAFT(object):
         np.random.seed(seed)
         tf.set_random_seed(seed)
         self.batch_norm = True
-        self.risk_function = risk_function
         self.covariates = covariates
 
         self.config = tf.ConfigProto(log_device_placement=False, allow_soft_placement=True)
@@ -251,10 +247,10 @@ class DeepRegularizedAFT(object):
 
     def train_neural_network(self):
         train_print = "Training Deep Regularized AFT Model:"
-        params_print = "Parameters: risk:{}, l2_reg:{}, learning_rate:{}," \
+        params_print = "Parameters: l2_reg:{}, learning_rate:{}," \
                        " momentum: beta1={} beta2={}, batch_size:{}, batch_norm:{}," \
                        " hidden_dim:{}, latent_dim:{}, num_of_batches:{}, keep_prob:{}" \
-            .format(self.risk_function, self.l2_reg, self.learning_rate, self.beta1, self.beta2, self.batch_size,
+            .format(self.l2_reg, self.learning_rate, self.beta1, self.beta2, self.batch_size,
                     self.batch_norm, self.hidden_dim, self.latent_dim, self.num_batches, self.keep_prob)
         print(train_print)
         print(params_print)

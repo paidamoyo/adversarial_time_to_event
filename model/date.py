@@ -31,7 +31,6 @@ class DATE(DATE_AE):
                  disc_updates,
                  categorical_indices,
                  l2_reg,
-                 dropout_rate,
                  max_epochs,
                  path_large_data=""
                  ):
@@ -48,7 +47,7 @@ class DATE(DATE_AE):
                          num_examples=num_examples, keep_prob=keep_prob,
                          latent_dim=latent_dim, end_t=end_t,
                          path_large_data=path_large_data,
-                         covariates=covariates, dropout_rate=dropout_rate,
+                         covariates=covariates,
                          categorical_indices=categorical_indices,
                          disc_updates=disc_updates,
                          sample_size=sample_size, imputation_values=imputation_values,

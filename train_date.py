@@ -70,7 +70,7 @@ if __name__ == '__main__':
                  num_examples=train['x'].shape[0], keep_prob=FLAGS.keep_prob,
                  latent_dim=FLAGS.latent_dim, end_t=end_t,
                  path_large_data=FLAGS.path_large_data,
-                 covariates=covariates, dropout_rate=FLAGS.dropout_rate,
+                 covariates=covariates,
                  categorical_indices=one_hot_indices,
                  disc_updates=FLAGS.disc_updates,
                  sample_size=FLAGS.sample_size, imputation_values=imputation_values,

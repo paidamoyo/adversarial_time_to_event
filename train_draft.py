@@ -55,13 +55,13 @@ if __name__ == '__main__':
                   beta2=FLAGS.beta2, require_improvement=FLAGS.require_improvement,
                   num_iterations=FLAGS.num_iterations, seed=FLAGS.seed,
                   l2_reg=FLAGS.l2_reg,
-                  hidden_dim=FLAGS.hidden_dim, risk_function=FLAGS.risk_function,
+                  hidden_dim=FLAGS.hidden_dim,
                   train_data=train, test_data=test, valid_data=valid,
                   input_dim=train['x'].shape[1],
                   num_examples=train['x'].shape[0], keep_prob=FLAGS.keep_prob,
                   latent_dim=FLAGS.latent_dim, end_t=end_t,
                   path_large_data=FLAGS.path_large_data,
-                  covariates=covariates, dropout_rate=FLAGS.dropout_rate,
+                  covariates=covariates,
                   categorical_indices=one_hot_indices, imputation_values=imputation_values,
                   sample_size=FLAGS.sample_size, max_epochs=dataset['epochs'])
 
