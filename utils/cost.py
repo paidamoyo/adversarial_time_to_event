@@ -119,7 +119,9 @@ def batch_metrics(e, risk_set, predicted, batch_size, empirical):
     square_batch_size = tf.pow(batch_size, tf.constant(2))
 
     def normarlize_loss(cost, size):
-        return tf.div(cost, tf.cast(size, dtype=tf.float32))
+        cast_size = tf.cast(size, dtype=tf.float32)
+        norm = tf.cond(tf.greater(cast_size, tf.constant(0.0)), lambda: tf.div(cost, cast_size), lambda: 0.0)
+        return norm
 
     total_recon_loss = tf.add(normarlize_loss(batch_cens_loss, size=censored),
                               normarlize_loss(batch_obs_loss, size=observed))
