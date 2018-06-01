@@ -71,8 +71,9 @@ class DATE(DATE_AE):
                                            beta2=self.beta2)
 
         dvars1 = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, "Discriminator_one")
+        genvars1 = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, "generate_t_given_x")
         self.disc_solver = optimizer.minimize(self.disc_one_loss, var_list=dvars1)
-        self.gen_solver = optimizer.minimize(self.gen_one_loss + self.t_regularization_loss)
+        self.gen_solver = optimizer.minimize(self.gen_one_loss + self.t_regularization_loss, var_list=genvars1)
 
     def _build_model(self):
         self._risk_date()

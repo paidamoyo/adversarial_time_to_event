@@ -156,10 +156,13 @@ class DATE_AE(object):
 
         dvars1 = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, "Discriminator_one")
         dvars2 = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, "Discriminator_two")
+        genvars1 = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, "generate_t_given_x")
+        genvars2 = tf.get_collection(tf.GraphKeys.TRAINABLE_VARIABLES, "generate_t_given_z")
 
         self.disc_solver = optimizer.minimize(self.disc_one_loss + self.disc_two_loss, var_list=dvars1 + dvars2)
         self.gen_solver = optimizer.minimize(
-            self.gen_one_loss + self.gen_two_loss + self.t_regularization_loss + self.layer_one_recon)
+            self.gen_one_loss + self.gen_two_loss + self.t_regularization_loss + self.layer_one_recon,
+            var_list=genvars1 + genvars2)
 
     def _build_model(self):
         self._denoising_date()
