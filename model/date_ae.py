@@ -37,6 +37,7 @@ class DATE_AE(object):
                  valid_data,
                  test_data,
                  end_t,
+                 gen_updates,
                  covariates,
                  imputation_values,
                  sample_size,
@@ -50,6 +51,7 @@ class DATE_AE(object):
         self.hidden_dim = hidden_dim
         self.batch_size = batch_size
         self.disc_updates = disc_updates
+        self.gen_updates = gen_updates
         self.latent_dim = latent_dim
         self.path_large_data = path_large_data
         self.seed = seed
@@ -383,15 +385,16 @@ class DATE_AE(object):
                                self.risk_set: risk_batch, self.batch_size_tensor: batch_size, self.is_training: True,
                                self.noise_alpha: np.ones(shape=self.noise_dim)}
             for k in range(self.disc_updates):
-                _, D_loss_curr = self.session.run([self.disc_solver, self.disc_one_loss],
-                                                  feed_dict=feed_dict_train)
+                _ = self.session.run([self.disc_solver], feed_dict=feed_dict_train)
+
+            for j in range(self.gen_updates):
+                _ = self.session.run([self.gen_solver], feed_dict=feed_dict_train)
+
             summary, train_time, train_cost, train_ranking, train_rae, train_reg, train_gen, train_layer_one_recon, \
-            train_t_reg, train_t_mse, train_disc, \
-            _ = self.session.run(
+            train_t_reg, train_t_mse, train_disc = self.session.run(
                 [self.merged, self.predicted_time, self.cost, self.ranking_partial_lik, self.total_rae,
                  self.reg_loss, self.gen_one_loss, self.layer_one_recon, self.t_regularization_loss, self.t_mse,
-                 self.disc_one_loss,
-                 self.gen_solver],
+                 self.disc_one_loss],
                 feed_dict=feed_dict_train)
             try:
                 train_ci = concordance_index(event_times=t_batch,

@@ -31,6 +31,7 @@ class DATE(DATE_AE):
                  disc_updates,
                  categorical_indices,
                  l2_reg,
+                 gen_updates,
                  max_epochs,
                  path_large_data=""
                  ):
@@ -51,7 +52,7 @@ class DATE(DATE_AE):
                          categorical_indices=categorical_indices,
                          disc_updates=disc_updates,
                          sample_size=sample_size, imputation_values=imputation_values,
-                         max_epochs=max_epochs)
+                         max_epochs=max_epochs, gen_updates=gen_updates)
 
         print_model = "model is DATE"
         print(print_model)

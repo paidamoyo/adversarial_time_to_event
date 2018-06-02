@@ -74,7 +74,7 @@ if __name__ == '__main__':
                  categorical_indices=one_hot_indices,
                  disc_updates=FLAGS.disc_updates,
                  sample_size=FLAGS.sample_size, imputation_values=imputation_values,
-                 max_epochs=dataset['epochs'])
+                 max_epochs=dataset['epochs'],  gen_updates=FLAGS.gen_updates)
 
     with date.session:
         date.train_test()

@@ -16,5 +16,6 @@ def set_params():
     flags.DEFINE_float("l1_reg", 0.001, "l1 regularization weight multiplier (just for debugging not optimization)")
     flags.DEFINE_float("keep_prob", 0.8, "keep prob for weights implementation in layers")
     flags.DEFINE_integer("sample_size", 200, "number of samples of generated time")
-    flags.DEFINE_integer("disc_updates", 1, "number of discriminator updates before generator update")
+    flags.DEFINE_integer("disc_updates", 1, "number of discriminator updates")
+    flags.DEFINE_integer("gen_updates", 2, "number of generator updates")
     return flags
