@@ -387,7 +387,7 @@ class DATE_AE(object):
             for k in range(self.disc_updates):
                 _ = self.session.run([self.disc_solver], feed_dict=feed_dict_train)
 
-            for j in range(self.gen_updates):
+            for m in range(self.gen_updates):
                 _ = self.session.run([self.gen_solver], feed_dict=feed_dict_train)
 
             summary, train_time, train_cost, train_ranking, train_rae, train_reg, train_gen, train_layer_one_recon, \
