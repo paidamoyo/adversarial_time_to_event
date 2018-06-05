@@ -13,8 +13,8 @@ This repository contains the TensorFlow code to replicate experiments in our pap
 This project is maintained by [Paidamoyo Chapfuwa](https://github.com/paidamoyo). Please contact <paidamoyo.chapfuwa@duke.edu> for any relevant issues.
 
 
-### Prerequisites
-The code is implemented with following dependencies:
+## Prerequisites
+The code is implemented with the following dependencies:
 
 - [Python 3.5.1](https://github.com/pyenv/pyenv)
 - [TensorFlow 1.5]( https://www.tensorflow.org/)
@@ -24,7 +24,7 @@ The code is implemented with following dependencies:
 pip install -r requirements.txt
 ```
 
-### Data
+## Data
 We consider the following datasets:
 
 - [SUPPORT](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets)
@@ -34,7 +34,7 @@ We consider the following datasets:
 
  For convenience, we provide pre-processing scripts of all datasets (except EHR). In addition, the *data* directory contains downloaded Flchain and SUPPORT datasets.
 
-### Model Training
+## Model Training
 
 The code consists of 3 models: DATE, DATE-AE and DRAFT. For each model first modify the train scripts with the chosen datasets.
 
