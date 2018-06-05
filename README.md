@@ -59,5 +59,5 @@ The code consists of 3 models: **DATE**, **DATE-AE** and **DRAFT**. For each mod
 Once the networks are trained and the results are saved we extract the following key results: 
 
 * Training and evaluation metrics are logged in **model.log**
-* Epoch based cost function plots can be found in the **plot** directory 
+* Epoch based cost function plots can be found in the **plots** directory 
 * To evaluate and plot generated time-to-event distribution we provide raw results in the  **matrix** directory
