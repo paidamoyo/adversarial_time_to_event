@@ -36,28 +36,28 @@ We consider the following datasets:
 
 ## Model Training
 
-The code consists of 3 models: DATE, DATE-AE and DRAFT. For each model first modify the train scripts with the chosen datasets.
+The code consists of 3 models: **DATE**, **DATE-AE** and **DRAFT**. For each model first modify the train scripts with the chosen datasets.
 
-* To train DATE or DATE_AE model (modify train script to choose the model)
+* To train **DATE** or **DATE_AE** model (modify train script to choose the model)
 
 ```
  python train_date.py
  ```
  
 
-* To train DRAFT model
+* To train **DRAFT** model
 
 ```
  python train_draft.py
  ```
 
-* The hyper-parameters settings can be found at *flags_parameters.py*
+* The hyper-parameters settings can be found at **flags_parameters.py**
 
 
 ## Metrics and Visualizations
 
 Once the networks are trained and the results are saved we extract the following key results: 
 
-* Training and evaluation metrics are logged in *model.log*
-* Epoch based cost function plots can be found in the *plot* directory 
-* To evaluate and plot generated time-to-event distribution we provide raw results in the  *matrix* directory
+* Training and evaluation metrics are logged in **model.log**
+* Epoch based cost function plots can be found in the **plot** directory 
+* To evaluate and plot generated time-to-event distribution we provide raw results in the  **matrix** directory
