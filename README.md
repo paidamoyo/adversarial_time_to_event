@@ -32,13 +32,13 @@ We consider the following datasets:
 - [SEER](https://seer.cancer.gov/)
 - EHR (a large study from Duke Hospital centered around impatient visits due to comorbidities in patients with Type-2 diabetes)
 
- For convenience, we provide pre-processing scripts of all datasets (except EHR). In addition, the `*data*` directory contains downloaded [Flchain](https://vincentarelbundock.github.io/Rdatasets/doc/survival/flchain.html) and [SUPPORT](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets) datasets.
+ For convenience, we provide pre-processing scripts of all datasets (except EHR). In addition, the [*data*](./data) directory contains downloaded [Flchain](https://vincentarelbundock.github.io/Rdatasets/doc/survival/flchain.html) and [SUPPORT](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets) datasets.
 
 ## Model Training
 
 The code consists of 3 models: **DATE**, **DATE-AE** and **DRAFT**. For each model, first modify the train scripts with the chosen datasets.
 
-* To train **DATE** or **DATE_AE** model (modify [train script](./train_date.py) to choose the model)
+* To train **DATE** or **DATE_AE** model (modify [train_date.py](./train_date.py) to choose the model)
 
 ```
  python train_date.py
@@ -59,5 +59,5 @@ The code consists of 3 models: **DATE**, **DATE-AE** and **DRAFT**. For each mod
 Once the networks are trained and the results are saved, we extract the following key results: 
 
 * Training and evaluation metrics are logged in **model.log**
-* Epoch based cost function plots can be found in the **plots** directory 
-* To evaluate and plot generated time-to-event distribution we provide raw results in the  **matrix** directory
+* Epoch based cost function plots can be found in the [**plots**](./plots) directory 
+* To evaluate and plot generated time-to-event distribution we provide raw results in the  [**matrix**](./matrix) directory
