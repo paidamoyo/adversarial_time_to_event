@@ -13,11 +13,14 @@ if __name__ == '__main__':
     GPUID = "0"
     os.environ['CUDA_VISIBLE_DEVICES'] = str(GPUID)
 
+    # Three public datasets to choose
     flchain = {"path": '', "preprocess": flchain_data, "epochs": 600}
     support = {"path": '', "preprocess": support_data, "epochs": 400}
     seer = {"path": '/data/ash/seer/', "preprocess": seer_data, "epochs": 120}  # TODO replace with your path
-    # TODO choose data and model use simple for now
+    
     dataset = support
+    
+    # Two date models to choose
     simple = True
     if simple:
         model = DATE
