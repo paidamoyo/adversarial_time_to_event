@@ -32,13 +32,13 @@ We consider the following datasets:
 - [SEER](https://seer.cancer.gov/)
 - EHR (a large study from Duke Hospital centered around impatient visits due to comorbidities in patients with Type-2 diabetes)
 
- For convenience, we provide pre-processing scripts of all datasets (except EHR). In addition, the *data* directory contains downloaded Flchain and SUPPORT datasets.
+ For convenience, we provide pre-processing scripts of all datasets (except EHR). In addition, the `*data*` directory contains downloaded [Flchain](https://vincentarelbundock.github.io/Rdatasets/doc/survival/flchain.html) and [SUPPORT](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets) datasets.
 
 ## Model Training
 
-The code consists of 3 models: **DATE**, **DATE-AE** and **DRAFT**. For each model first modify the train scripts with the chosen datasets.
+The code consists of 3 models: **DATE**, **DATE-AE** and **DRAFT**. For each model, first modify the train scripts with the chosen datasets.
 
-* To train **DATE** or **DATE_AE** model (modify train script to choose the model)
+* To train **DATE** or **DATE_AE** model (modify [train script](./train_date.py) to choose the model)
 
 ```
  python train_date.py
@@ -51,12 +51,12 @@ The code consists of 3 models: **DATE**, **DATE-AE** and **DRAFT**. For each mod
  python train_draft.py
  ```
 
-* The hyper-parameters settings can be found at **flags_parameters.py**
+* The hyper-parameters settings can be found at [**flags_parameters.py**](./flags_parameters.py)
 
 
 ## Metrics and Visualizations
 
-Once the networks are trained and the results are saved we extract the following key results: 
+Once the networks are trained and the results are saved, we extract the following key results: 
 
 * Training and evaluation metrics are logged in **model.log**
 * Epoch based cost function plots can be found in the **plots** directory 
