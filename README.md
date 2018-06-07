@@ -39,7 +39,7 @@ We consider the following datasets:
 The code consists of 3 models: **DATE**, **DATE-AE** and **DRAFT**. 
 For each model, please modify the train scripts with the chosen datasets:  `dataset` is set to one of the three public datasets `{flchain, support, seer}`, the default is `support`.
 
-* To train **DATE** or **DATE_AE** model (When `simple=True` (default), **DATE** is chosen. Please modify [train_date.py](./train_date.py) otherwise.)
+* To train **DATE** or **DATE_AE** model (When `simple=True` (default), **DATE** is chosen. Otherwise, modify in [train_date.py](./train_date.py).)
 
 ```
  python train_date.py
