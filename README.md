@@ -30,7 +30,7 @@ We consider the following datasets:
 - [SUPPORT](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets)
 - [Flchain](https://vincentarelbundock.github.io/Rdatasets/doc/survival/flchain.html)
 - [SEER](https://seer.cancer.gov/)
-- EHR (a large study from Duke Hospital centered around impatient visits due to comorbidities in patients with Type-2 diabetes)
+- EHR (a large study from Duke University Health System centered around inpatient visits due to comorbidities in patients with Type-2 diabetes)
 
  For convenience, we provide pre-processing scripts of all datasets (except EHR). In addition, the [*data*](./data) directory contains downloaded [Flchain](https://vincentarelbundock.github.io/Rdatasets/doc/survival/flchain.html) and [SUPPORT](http://biostat.mc.vanderbilt.edu/wiki/Main/DataSets) datasets.
 
